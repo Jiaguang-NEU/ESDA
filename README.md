@@ -41,7 +41,7 @@ Performance comparison with the state-of-the-art approachs in terms of **average
    | Backbone  | Method       | PASCAL-5i               | COCO-20i                 |
    | --------  | ------------ | ------------------------| ------------------------ |
    | ViT-B     | ClsCLIP      | 56.4                    | 37.0                     |
-   | ViT-B     | SAM-RSP(ours)| 58.9                    | 37.1                     |
+   | ViT-B     | ESDA(ours)| 58.9                    | 37.1                     |
 
 
    
