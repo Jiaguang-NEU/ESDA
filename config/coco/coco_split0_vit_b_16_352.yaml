@@ -1,0 +1,85 @@
+DATA:
+  data_root: '/home/data/ljg/zw/ESDA-main/data/MSCOCO2014/'
+  train_list: '/home/data/ljg/zw/ESDA-main/lists/coco/train_data_list.txt'
+  val_list: '/home/data/ljg/zw/ESDA-main/lists/coco/val_data_list.txt'
+  classes: 2
+
+TRAIN:
+  # Dataset transform
+  sync_bn: False
+  train_h: 352
+  train_w: 352
+  val_size: 352
+  scale_min: 0.9  # minimum random scale
+  scale_max: 1.1 # maximum random scale
+  rotate_min: -10  # minimum random rotate
+  rotate_max: 10  # maximum random rotate
+  zoom_factor: 8  # zoom factor for final prediction during training, be in [1, 2, 4, 8]
+  ignore_label: 255
+  padding_label: 255
+  # Dataset & Mode
+  split: 0
+  use_coco: True
+  use_split_coco: True
+  # # Backbone
+  get_embeddings: True
+  pretrained_path: '/home/data/ljg/zw/ESDA-main/model/backbone/pretrain_model/ViT-B-16.pt'
+  # text_encoder
+  context_length: 77
+  vocab_size: 49408
+  embed_dim: 512
+  transformer_width: 512
+  transformer_heads: 8
+  transformer_layers: 12
+  # img_encoder(vit)
+  patch_size: 16
+  width: 768
+  layers: 12
+  heads: 12
+  output_dim: 512
+  out_indices: [11]
+  prior_indices: [0,1,2,3,4,5,6,7,8,9,10,11] # [0,1,2,3,4,5,6,7,8,9,10,11]
+  replace_indices: [2,3,4]
+  use_prompt: True
+  # Optimizer
+  workers: 8  # data loader workers
+  batch_size: 32 # batch size for training
+  base_lr: 0.00005
+  epochs: 200
+  start_epoch: 0
+  stop_interval: 50 # stop when the best result is not updated for "stop_interval" epochs
+  index_split: -1 # index for determining the params group with 10x learning rate
+  power: 0.9 # 0 means no decay
+  momentum: 0.9
+  weight_decay: 0.0001
+  warmup: False
+  loss_weight: [1.0,0.2,0.1]  # [mian loss, aux_loss1, aux_loss2]
+  # Save & Resume
+  print_freq: 10
+  save_freq: 1
+  resume_path:  # path to latest checkpoint (default: none, such as epoch_10.pth)
+  # Validate
+  evaluate: True
+  SubEpoch_val: True # val at the half epoch
+  resized_val: True
+  ori_resize: True  # use original label for evaluation
+  batch_size_val: 1
+  fix_random_seed_val: True
+  # Test & Finetune
+  weight:  # load weight for fine-tuning or testing
+  # Else
+  fix_bn: True
+  manual_seed: 321
+  seed_deterministic: False
+
+## deprecated multi-processing training
+#Distributed:
+#  dist_url: tcp://127.0.0.1:6789
+#  dist_backend: 'nccl'
+#  multiprocessing_distributed: False
+#  world_size: 1
+#  rank: 0
+#  use_apex: False
+#  opt_level: 'O0'
+#  keep_batchnorm_fp32:
+#  loss_scale:
