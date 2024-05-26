@@ -23,6 +23,7 @@
 
 - COCO-20<sup>i</sup>:  [COCO2014](https://cocodataset.org/#download)
 - Put the datasets into the `data/` directory.
+- Download the data lists from [BAM](https://github.com/chunbolang/BAM).
 
 ### Models
 
@@ -41,7 +42,7 @@ Performance comparison with the state-of-the-art approachs in terms of **average
    | Backbone  | Method       | PASCAL-5i               | COCO-20i                 |
    | --------  | ------------ | ------------------------| ------------------------ |
    | ViT-B     | ClsCLIP      | 56.4                    | 37.0                     |
-   | ViT-B     | ESDA(ours)| 58.9                    | 37.1                     |
+   | ViT-B     | ESDA(ours)   | 58.9                    | 37.1                     |
 
 
    
