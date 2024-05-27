@@ -163,7 +163,7 @@ class SemData(Dataset):
         #     assert len(self.sub_class_file_list.keys()) == len(self.sub_list)
         # elif self.mode == 'val':
         #     self.data_list, self.sub_class_file_list = make_dataset(split, data_root, data_list, self.sub_val_list, filter_intersection=False)
-        #     # 验证图像可以包含已知类
+        #     # 
         #     assert len(self.sub_class_file_list.keys()) == len(self.sub_val_list)
         #
         # os.makedirs(os.path.dirname(data_list_path), exist_ok=True)
