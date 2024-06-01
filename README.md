@@ -1,7 +1,7 @@
 
-# ESDA: Zero-Shot Semantic Segmentation Based on an Embedding Semantic Space Distribution Adjustment Strategy
+# ESDA
 
-> **Abstract:** Recently, the CLIP model, which is pre-trained on large-scale vision-language data, has promoted the development of zero-shot recognition tasks. Some researchers apply CLIP to zero-shot semantic segmentation, but they often struggle to achieve satisfactory results. This is because this dense prediction task requires not only precise understanding of semantics, but also precise perception of different regions within one image. However, CLIP is trained on image-level vision-language data, resulting in ineffective perception of pixel-level regions. In this paper, we propose a new zero-shot semantic segmentation (ZS3) method based on an embedding semantic space distribution adjustment strategy (ESDA), which enables CLIP to accurately perceive both semantics and regions. This method inserts additional trainable blocks into the CLIP image encoder, enabling it to effectively perceive regions without losing semantic understanding. Besides, we design spatial distribution losses to guide the update of parameters of the trainable blocks, thereby further enhancing the regional characteristics of pixel-level image embeddings. In addition, previous methods only obtain semantic support through a [CLS] token of the text embeddings, which is far from sufficient for segmentation tasks. We design a vision-language embedding interactor, which can obtain richer semantic support through the interaction between the entire text embeddings and image embeddings. Plenty of experiments on PASCAL-5<sup>i</sup> and COCO-20<sup>i</sup> prove the effectiveness of our method. Our method achieves new state-of-the-art for zero-shot semantic segmentation and exceeds many few-shot semantic segmentation methods.
+> **Abstract:** 
 
 <p align="middle">
   <img src="figure/main.png">
