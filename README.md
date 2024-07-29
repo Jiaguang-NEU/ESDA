@@ -55,4 +55,4 @@ Performance comparison with the state-of-the-art approachs in terms of **average
 This repo is mainly built based on [CLIP](https://github.com/openai/CLIP), and [BAM](https://github.com/chunbolang/BAM). Thanks for their great work!
 
 ````
-This paper is currently being reviewed by the IEEE Transactions on Circuits and Systems for Video Technology journal.
+This paper is currently being reviewed by the Image and Vision Computing journal.
