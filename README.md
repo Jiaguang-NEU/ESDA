@@ -9,12 +9,7 @@
 
 ### Dependencies
 
-- RTX 3090
-- Python 3.8
 - PyTorch 1.12.0
-- cuda 11.6
-- torchvision 0.13.0
-- tensorboardX 2.2
 
 
 ### Datasets
@@ -42,6 +37,7 @@ Performance comparison with the state-of-the-art approachs in terms of **average
    | Backbone  | Method       | PASCAL-5i               | COCO-20i                 |
    | --------  | ------------ | ------------------------| ------------------------ |
    | ViT-B     | ClsCLIP      | 56.4                    | 37.0                     |
+   | ViT-B     | ClsCLIP+     | 71.5                    | 52.9                     |
    | ViT-B     | ESDA(ours)   | 58.9                    | 37.1                     |
 
 
@@ -52,7 +48,7 @@ Performance comparison with the state-of-the-art approachs in terms of **average
 
 ## References
 
-This repo is mainly built based on [CLIP](https://github.com/openai/CLIP), and [BAM](https://github.com/chunbolang/BAM). Thanks for their great work!
+This repo is mainly built based on [ClsCLIP/ClsCLIP+](https://arxiv.org/pdf/2304.06212v1), [CLIP](https://github.com/openai/CLIP), and [BAM](https://github.com/chunbolang/BAM). Thanks for their great work!
 
 ````
-This paper is currently being reviewed by the Image and Vision Computing journal.
+This paper has been accepted by the Image and Vision Computing journal.
