@@ -21,7 +21,7 @@ TRAIN:
   split: 0
   use_coco: False
   use_split_coco: False
-  # # Backbone
+  # Backbone
   get_embeddings: True
   pretrained_path: '/home/data/ljg/zw/ESDA-main/model/backbone/pretrain_model/ViT-B-16.pt'
   # text_encoder
