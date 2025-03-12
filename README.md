@@ -7,10 +7,6 @@
   <img src="figure/main.png">
 </p>
 
-### Dependencies
-
-- PyTorch 1.12.0
-
 
 ### Datasets
 
